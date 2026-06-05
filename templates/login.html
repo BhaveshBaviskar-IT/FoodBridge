@@ -1,0 +1,214 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>FoodBridge</title> 
+ 
+<style> 
+ 
+*{ 
+    margin:0; 
+    padding:0; 
+    box-sizing:border-box; 
+    font-family:'Segoe UI',sans-serif; 
+} 
+ 
+body{ 
+    min-height:100vh; 
+    display:flex; 
+    justify-content:center; 
+    align-items:center; 
+    background: 
+    linear-gradient( 
+        rgba(0,0,0,0.55), 
+        rgba(0,0,0,0.55) 
+    ), 
+    url("https://images.unsplash.com/photo-1488459716781-31db52582fe9"); 
+    background-size:cover; 
+    background-position:center; 
+    overflow:hidden; 
+} 
+ 
+.container{ 
+    width:450px; 
+    padding:40px; 
+    border-radius:25px; 
+    background:rgba(255,255,255,0.15); 
+    backdrop-filter:blur(18px); 
+    border:1px solid rgba(255,255,255,0.2); 
+    box-shadow:0 8px 32px rgba(0,0,0,0.3); 
+    color:white; 
+    animation:glow 4s infinite alternate; 
+} 
+ 
+@keyframes glow{ 
+    from{ 
+        box-shadow: 
+        0 0 20px rgba(0,255,100,.3); 
+    } 
+ 
+    to{ 
+        box-shadow: 
+        0 0 40px rgba(41,98,255,.5); 
+    } 
+} 
+ 
+.logo{ 
+    text-align:center; 
+    font-size:60px; 
+} 
+ 
+.title{ 
+    text-align:center; 
+    font-size:34px; 
+    font-weight:bold; 
+    margin-top:10px; 
+} 
+ 
+.tagline{ 
+    text-align:center; 
+    margin-top:8px; 
+    opacity:.9; 
+    margin-bottom:20px; 
+} 
+ 
+.stats{ 
+    text-align:center; 
+    background:rgba(255,255,255,.12); 
+    padding:12px; 
+    border-radius:12px; 
+    margin-bottom:25px; 
+} 
+ 
+input{ 
+    width:100%; 
+    padding:15px; 
+    margin:10px 0; 
+    border:none; 
+    border-radius:14px; 
+    background:rgba(255,255,255,.2); 
+    color:white; 
+    font-size:15px; 
+    outline:none; 
+} 
+ 
+input::placeholder{ 
+    color:#eee; 
+} 
+ 
+button{ 
+    width:100%; 
+    padding:14px; 
+    border:none; 
+    border-radius:14px; 
+    margin-top:12px; 
+    cursor:pointer; 
+    font-size:15px; 
+    font-weight:600; 
+    transition:.3s; 
+} 
+ 
+button:hover{ 
+    transform:translateY(-2px); 
+} 
+ 
+.register-btn{ 
+    background:#00c853; 
+    color:white; 
+} 
+ 
+.login-btn{ 
+    background:#2962ff; 
+    color:white; 
+} 
+ 
+.google-btn{ 
+    background:white; 
+    color:black; 
+} 
+ 
+.logout-btn{ 
+    background:#ff1744; 
+    color:white; 
+} 
+ 
+.user-info{ 
+    margin-top:20px; 
+    text-align:center; 
+    font-weight:bold; 
+} 
+ 
+.status{ 
+margin-top:15px; 
+text-align:center; 
+} 
+.footer{ 
+margin-top:20px; 
+text-align:center; 
+opacity:.8; 
+font-size:13px; 
+} 
+</style> 
+</head> 
+<body> 
+<div class="container"> 
+<div class="logo">🍽️</div> 
+<div class="title">FoodBridge</div> 
+<div class="tagline"> 
+Connecting Surplus Food With Those In Need 
+</div> 
+<div class="stats"> 
+�
+� 12,483 Meals Saved &nbsp;|&nbsp; 
+�
+� 3,245 Donors &nbsp;|&nbsp; 
+�
+� 128 NGOs 
+</div> 
+<input 
+type="email" 
+id="email" 
+placeholder="Enter Email" 
+> 
+<input 
+type="password" 
+id="password" 
+placeholder="Enter Password" 
+> 
+<button 
+id="registerBtn" 
+class="register-btn"> 
+Create Account 
+</button> 
+<button 
+id="loginBtn" 
+class="login-btn"> 
+Login 
+</button> 
+<button 
+id="googleBtn" 
+class="google-btn"> 
+Continue with Google 
+</button> 
+<button 
+id="logoutBtn" 
+class="logout-btn"> 
+Logout 
+</button> 
+<div 
+id="userInfo" 
+class="user-info"> 
+</div> 
+<div 
+id="status" 
+class="status"> 
+</div> 
+<div class="footer"> 
+�
+� Reducing Food Waste, One Meal At A Time 
+</div> 
+</div> 
+<script type="module" src="{{ url_for('static', filename='script.js') }}"></script>
+</body> 
+</html>

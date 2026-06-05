@@ -1,0 +1,254 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>FoodBridge | Food Rescue Mission</title> 
+ 
+<link rel="stylesheet" href="/static/style.css"> 
+ 
+<style> 
+ 
+.mission-header{ 
+ 
+    text-align:center; 
+ 
+    margin-bottom:30px; 
+} 
+ 
+.mission-title{ 
+ 
+    font-size:42px; 
+ 
+    font-weight:bold; 
+ 
+    background:linear-gradient( 
+        90deg, 
+        #00e676, 
+        #00b0ff 
+    ); 
+ 
+    -webkit-background-clip:text; 
+    -webkit-text-fill-color:transparent; 
+} 
+ 
+.mission-subtitle{ 
+ 
+    margin-top:10px; 
+ 
+    opacity:.85; 
+} 
+ 
+.mission-stats{ 
+ 
+    display:grid; 
+ 
+    grid-template-columns: 
+    repeat(auto-fit,minmax(180px,1fr)); 
+ 
+    gap:15px; 
+ 
+    margin-bottom:30px; 
+} 
+ 
+.mission-box{ 
+ 
+    background:rgba(255,255,255,.1); 
+ 
+    backdrop-filter:blur(15px); 
+ 
+    border-radius:15px; 
+ 
+    padding:20px; 
+ 
+    text-align:center; 
+} 
+ 
+.mission-box h2{ 
+    color:#00e676; 
+} 
+ 
+.form-grid{ 
+ 
+    display:grid; 
+ 
+    grid-template-columns:1fr 1fr; 
+ 
+    gap:15px; 
+} 
+ 
+textarea{ 
+ 
+    min-height:120px; 
+ 
+    resize:none; 
+} 
+ 
+.upload-box{ 
+ 
+    margin-top:15px; 
+ 
+    padding:25px; 
+ 
+    border:2px dashed 
+    rgba(255,255,255,.3); 
+ 
+    border-radius:15px; 
+ 
+    text-align:center; 
+} 
+ 
+.upload-box:hover{ 
+    border-color:#00e676; 
+} 
+ 
+.submit-btn{ 
+ 
+    background: 
+    linear-gradient( 
+        90deg, 
+        #00e676, 
+        #2962ff 
+    ); 
+ 
+    font-weight:bold; 
+ 
+    letter-spacing:1px; 
+} 
+ 
+.submit-btn:hover{ 
+ 
+    transform:translateY(-3px) 
+    scale(1.01); 
+} 
+ 
+.reward-card{ 
+ 
+    margin-top:25px; 
+ 
+    background:rgba(255,255,255,.08); 
+ 
+    border-radius:15px; 
+ 
+    padding:20px; 
+ 
+    text-align:center; 
+} 
+ 
+.reward-card h3{ 
+    color:#ffd700; 
+} 
+ 
+</style> 
+ 
+</head> 
+<body> 
+ 
+<div class="glass-card glow"> 
+ 
+    <div class="mission-header"> 
+ 
+        <div style="font-size:70px;"> 
+            🚀 
+        </div> 
+ 
+        <div class="mission-title"> 
+            FOOD RESCUE MISSION 
+        </div> 
+ 
+        <div class="mission-subtitle"> 
+            Transform surplus food into hope. 
+        </div> 
+ 
+    </div> 
+ 
+    <div class="mission-stats"> 
+ 
+        <div class="mission-box"> 
+            <h2>12,483</h2> 
+            Meals Saved 
+        </div> 
+ 
+        <div class="mission-box"> 
+            <h2>247</h2> 
+            Active Deliveries 
+        </div> 
+ 
+        <div class="mission-box"> 
+            <h2>128</h2> 
+            NGOs 
+        </div> 
+ 
+        <div class="mission-box"> 
+            <h2>98%</h2> 
+            Success Rate 
+        </div> 
+ 
+    </div> 
+ 
+    <form action="/submit_donation" method="POST"> 
+ 
+        <div class="form-grid"> 
+ 
+            <input 
+            type="text" 
+            name="name" 
+            placeholder="👤 Donor Name" 
+            required> 
+ 
+            <input 
+            type="text" 
+            name="food_type" 
+            placeholder="🍱 Food Type" 
+            required> 
+ 
+            <input 
+            type="number" 
+            name="quantity" 
+            placeholder="📦 Quantity" 
+            required> 
+ 
+            <input 
+            type="date" 
+            name="expiry" 
+            required> 
+ 
+        </div> 
+ 
+        <textarea 
+        placeholder="📝 Additional Notes (optional)"> 
+        </textarea> 
+ 
+        <div class="upload-box"> 
+ 
+            📸 Upload Food Image (Future Feature) 
+ 
+            <br><br> 
+ 
+            <input type="file"> 
+ 
+        </div> 
+ 
+        <button 
+        class="submit-btn" 
+        type="submit"> 
+ 
+            🚚 DEPLOY DONATION 
+ 
+        </button> 
+ 
+    </form> 
+ 
+    <div class="reward-card"> 
+ 
+        <h3>🏆 Impact Achievement</h3> 
+ 
+        Every donation increases your 
+        FoodBridge Impact Score. 
+ 
+    </div> 
+ 
+</div> 
+ 
+</body> 
+</html>
