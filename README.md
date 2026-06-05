@@ -6,3 +6,4 @@ claudinary url to firebase.
 
 llm model(future) where we identify if food is correct or not.
 
+a make sure thing to identify the donar is true and product to + aadhar card & phone number 
