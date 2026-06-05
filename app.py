@@ -7,9 +7,9 @@ import json
 app = Flask(__name__)
 
 # Initialize Firebase
-# cred = credentials.Certificate("serviceAccountKey.json")
-# firebase_admin.initialize_app(cred)
-# db = firestore.client()
+cred = credentials.Certificate("serviceAccountKey.json")
+firebase_admin.initialize_app(cred)
+db = firestore.client()
 
 @app.route('/')
 def login():
