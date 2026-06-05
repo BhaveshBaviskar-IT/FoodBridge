@@ -7,9 +7,9 @@ import json
 app = Flask(__name__)
 
 # Initialize Firebase
-cred = credentials.Certificate("serviceAccountKey.json")
-firebase_admin.initialize_app(cred)
-db = firestore.client()
+# cred = credentials.Certificate("serviceAccountKey.json")
+# firebase_admin.initialize_app(cred)
+# db = firestore.client()
 
 @app.route('/')
 def login():
@@ -157,4 +157,4 @@ def claim_donation(donation_id):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=10000)
