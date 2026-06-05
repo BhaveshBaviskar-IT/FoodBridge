@@ -2,9 +2,9 @@ from flask import Flask, render_template, request, redirect
 import firebase_admin
 from firebase_admin import credentials, firestore
 app = Flask(__name__)
-cred = credentials.Certificate("serviceAccountKey.json")
-firebase_admin.initialize_app(cred)
-db = firestore.client()
+# cred = credentials.Certificate("serviceAccountKey.json")
+# firebase_admin.initialize_app(cred)
+# db = firestore.client()
 @app.route('/')
 def login():
     return render_template('login.html')
